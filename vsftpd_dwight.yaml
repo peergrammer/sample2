@@ -6,10 +6,10 @@
     yum: name=vsftpd
   - name: enable vsftpd
     service: name=vsftpd enabled=true
-  - name: create readme file
+  - name: create readme file for dwight
     copy:
       content: "this is modified by dwight. wha Awesome!\n"
-      dest: /var/ftp/pub/README
+      dest: /var/ftp/pub/README.DWIGHT
       force: no
       mode: 0444
 ...
