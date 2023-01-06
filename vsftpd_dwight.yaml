@@ -7,8 +7,8 @@
   - name: enable vsftpd
     service: name=vsftpd enabled=true
   - name: Copy using inline content
-  ansible.builtin.copy:
-    content: '# This file was moved to /etc/other.conf'
-    dest: /etc/mine.conf
+    copy:
+      content: '# This file was moved to /etc/other.conf'
+      dest: /etc/mine.conf
 
 
