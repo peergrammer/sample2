@@ -1,14 +1,13 @@
 ---
 - name: deploy vsftpd
   hosts: target1
-  tasks: 
+  tasks:
   - name: install vsftpd
     yum: name=vsftpd
   - name: enable vsftpd
     service: name=vsftpd enabled=true
   - name: Copy using inline content
     copy:
-      content: '# This file was moved to /etc/other.conf'
-      dest: /etc/dwight2.txt
-
+      content: "this is ridiculous"
+      dest: /etc/dwightaa.txt
 
