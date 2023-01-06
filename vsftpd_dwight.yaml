@@ -6,10 +6,9 @@
     yum: name=vsftpd
   - name: enable vsftpd
     service: name=vsftpd enabled=true
-  - name: create readme file for dwight
-    copy:
-      content: "this is modified by dwight. wha Awesome!\n"
-      dest: /var/ftp/pub/README.DWIGHT
-      force: no
-      mode: 0444
-...
+  - name: Copy using inline content
+  ansible.builtin.copy:
+    content: '# This file was moved to /etc/other.conf'
+    dest: /etc/mine.conf
+
+
