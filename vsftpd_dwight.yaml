@@ -9,6 +9,6 @@
   - name: Copy using inline content
     copy:
       content: '# This file was moved to /etc/other.conf'
-      dest: /etc/mine.conf
+      dest: /etc/dwight2.txt
 
 
